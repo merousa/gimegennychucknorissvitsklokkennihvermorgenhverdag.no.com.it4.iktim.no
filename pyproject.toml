@@ -1,0 +1,19 @@
+[project]
+name = "gimegennychucknorissvitsklokkennihvermorgenhverdag-no-com-it4-iktim-no"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "merousa", email = "yeet123442@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "flask>=3.1.3",
+]
+
+[project.scripts]
+gimegennychucknorissvitsklokkennihvermorgenhverdag-no-com-it4-iktim-no = "gimegennychucknorissvitsklokkennihvermorgenhverdag_no_com_it4_iktim_no:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
