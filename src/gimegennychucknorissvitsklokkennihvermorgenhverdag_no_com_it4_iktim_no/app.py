@@ -38,7 +38,17 @@ def addToVault(date,joke):
     with open("jokeVault","w") as vault:
         json.dump(data,vault,indent=4)
 
+def timeForNewJoke():
+    date = datetime.datetime.now()
+    hour = date.hour
+    if hour >= 9:
+        return True
+    else:
+        return False
+
 def getJokeFromDate(date):
+    if not timeForNewJoke():
+        date = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%d.%m.%Y")
     savedJoke = jokeInVault(date)
     if savedJoke:
         print("Joke found")
@@ -63,4 +73,4 @@ if __name__ == "__main__":
         open("jokeVault","x").write("{}")
     except FileExistsError:
         pass
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port=5000)
