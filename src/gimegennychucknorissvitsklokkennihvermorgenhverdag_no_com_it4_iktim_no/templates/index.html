@@ -41,5 +41,33 @@
             <div id="countdown">Calculating...</div>
         </div>
     </div>
+    <script>
+        (function () {
+            var el = document.getElementById("countdown");
+            var end = null;
+
+            function pad(n) { return String(n).padStart(2, "0"); }
+
+            function tick() {
+                if (end === null) return;
+                var left = Math.max(0, Math.ceil((end - Date.now()) / 1000));
+                el.textContent = pad(Math.floor(left / 3600)) + ":" + pad(Math.floor(left % 3600 / 60)) + ":" + pad(left % 60);
+                if (left === 0) {
+                    end = null;
+                    setTimeout(function () { location.reload(); }, 1500);
+                }
+            }
+
+            function sync() {
+                fetch("/seconds-until-next-joke")
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) { end = Date.now() + d.seconds * 1000; tick(); })
+                    .catch(function () { setTimeout(sync, 10000); });
+            }
+
+            setInterval(tick, 1000);
+            sync();
+        })();
+    </script>
 </body>
 </html>
