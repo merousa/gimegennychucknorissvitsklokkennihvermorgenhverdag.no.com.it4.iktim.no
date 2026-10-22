@@ -52,7 +52,7 @@ def add_paywall_ui(response):
         price=PRICE_TEXT,
     )
     response.set_data(html[:end] + ui + html[end:])
-    response.vary.add("Cookie")  # the page differs depending on the cookie
+    response.vary.add("Cookie") 
     return response
 
 
