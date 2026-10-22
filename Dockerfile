@@ -12,8 +12,6 @@ RUN apt-get update \
 RUN uv sync --no-install-project
 
 COPY src/ ./src/
-COPY templates/ ./src/gimegennychucknorissvitsklokkennihvermorgenhverdag_no_com_it4_iktim_no/templates/
-COPY paywall/ ./paywall/
 COPY jokeVault ./jokeVault
 EXPOSE 5000
 CMD ["/app/.venv/bin/python", "src/gimegennychucknorissvitsklokkennihvermorgenhverdag_no_com_it4_iktim_no/app.py"]
