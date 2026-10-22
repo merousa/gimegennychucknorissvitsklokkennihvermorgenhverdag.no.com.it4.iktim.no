@@ -5,7 +5,7 @@ import json
 import datetime
 from dataclasses import dataclass
 import os
-from .paywall.paywall import paywall_bp
+from paywall.paywall import paywall_bp
 
 @dataclass
 class Joke:
