@@ -42,3 +42,7 @@ tror det skal fint kjøre i Docker
 Hvis jeg åpner siden som localhost får jeg plassholdere i stedet for AdSense.
 
 Jeg ryddet også opp i oppsettet slik at appen bruker pakkestrukturen konsekvent. Flask finner nå templates og paywall inne i pakken, og Docker starter appen som en Python-modul. jokeVault blir også kopiert inn i Docker-containeren. Jeg testet at appen starter lokalt og at forsiden svarer med HTTP 200.
+
+Jeg ble ferdig å sett opp appen på nginx proxt manager så nå kan du gå på gimegennychucknorrisvitsklokkennihvermorgenhverdag.no.com.it3.iktim.no og se at appen fungerte det tok lang tid med mye feilsøking men jeg fikk det til. for å være mer spesefikk måtte jeg endre på alt hele tiden men også uten å endre mye.
+
+Jeg testet appen og alt virker som det skal for nå og er helt perfekt.
