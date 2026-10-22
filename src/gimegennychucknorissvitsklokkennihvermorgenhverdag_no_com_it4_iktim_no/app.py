@@ -4,6 +4,8 @@ import schedule
 import json
 import datetime
 from dataclasses import dataclass
+import os
+from .paywall.paywall import paywall_bp
 
 @dataclass
 class Joke:
@@ -59,7 +61,8 @@ def getJokeFromDate(date):
     addToVault(date,newJoke.joke)
     return newJoke
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), "templates"))
+app.register_blueprint(paywall_bp)
 
 @app.route("/")
 def home():
@@ -67,6 +70,14 @@ def home():
     joke = getJokeFromDate(date)
     print(date,joke)
     return render_template("index.html", joke=joke.joke)
+
+@app.route("/seconds-until-next-joke")
+def secondsUntilNextJoke():
+    now = datetime.datetime.now()
+    nextJoke = now.replace(hour=9, minute=0, second=0, microsecond=0)
+    if now >= nextJoke:
+        nextJoke += datetime.timedelta(days=1)
+    return {"seconds": (nextJoke - now).total_seconds()}
 
 if __name__ == "__main__":
     try:
