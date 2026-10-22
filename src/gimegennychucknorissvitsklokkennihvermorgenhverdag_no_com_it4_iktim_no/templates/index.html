@@ -20,7 +20,14 @@
             align-items: center;
             margin: auto;
         }
-
+        .box {
+            width: 67%;
+            margin: auto;
+            background: linear-gradient(to bottom, rgb(25,25,25),rgb(50,50,50));
+            border-radius: 10px;
+            padding: 20px;
+            outline: 1px solid rgb(138, 138, 138);
+        }
         h1 {
             color: rgb(255, 255, 255);
         }
@@ -36,7 +43,9 @@
     <div class="gradient">
         <div class="center">
             <h1>Chuck Norris Joke of the Day!</h1>
-            <h2>{{joke}}</h2>
+            <div class="box">
+                <h2>{{joke}}</h2>
+            </div>
             <h2>Time remaining until next Chuck Norris joke:</h2>
             <div id="countdown">Calculating...</div>
         </div>
