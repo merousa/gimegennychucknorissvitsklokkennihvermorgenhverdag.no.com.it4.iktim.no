@@ -84,4 +84,4 @@ if __name__ == "__main__":
         open("jokeVault","x").write("{}")
     except FileExistsError:
         pass
-    app.run(host="0.0.0.0",port=5000)
+    app.run(host="0.0.0.0",port=5000,debug=True)
