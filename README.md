@@ -1,11 +1,10 @@
-Trym Dokumentasjon:
-var redd for at jeg ville overide readme.md vist jeg skrev i den så jeg skriver min dokumentasjon her
+# Trym Dokumentasjon
 
 Appen viser en Chuck Norris-vits for dagen. Den er laget i Python med Flask. Før jeg kunne endre noe måtte jeg lære meg hvordan koden til mine med partnere fungerte. app.py henter en vits fra et API og lagrer den i filen jokeVault det er bare en vits per dato. Så sender den vitsen til index.html. Ny vits kommer klokka 09:00.
 
 Alt under her er det jeg har lagt til eller rettet. Jeg ville ikke egentlig endre den gamle koden til mine partnere mer enn jeg måtte og jeg ville ikke bruke penger. Derfor ligger nesten alt i en egen fil og betalingsmuren er gratis.
 
-Hva jeg har gjort
+## Hva jeg har gjort
 
 Jeg rettet en feil med nedtellingen la til fire annonser laget en knapp for å fjerne annonser laget en donasjonsknapp og koblet til Google AdSense.
 
@@ -46,14 +45,14 @@ Jeg ryddet også opp i oppsettet slik at appen bruker pakkestrukturen konsekvent
 
 
 
-Noah Dokumentasjon:
+# Noah Dokumentasjon:
 
 
 
-Sebastian Dokumentasjon:
+# Sebastian Dokumentasjon:
 Min arbeidsoppgave har vært å programmere selve funksjonen av appen. Altså at du får en tilfeldig chuck norris vits klokken 9 hver morgen. Jeg begynte først med å sette opp flask og lage en super simpel template html fil å jobbe i. Jeg satt først opp JavaScript i HTML som sjekket hva klokken var, og om det hadde passert klokken 9 enda, hentet en vits fra APIet til api.chucknorris.io også viste den på tekst objektet. Jeg hadde det satt opp slik at den sjekke om det allerede fins en vits i localStorage, og hvis der gjør, vis den frem. Hvis ikke, hent en vits fra APIet og lagre den i localStorage. Sondre viste meg at det vil si at vitsen er bare lokal. Hver maskin hadde fått en annerledes vits, men målet var at alle fikk den samme nye vitsen. Derfor begynte jeg å kode logikken igjen i flask. Da fikk jeg satt opp en nokså lik funksjon. Der er en JSON jokeVault fil som lagrer alle vitsene og datoene de var på. Først sjekker koden om det er en vits lagret for dagens dato, og om klokken er 9 eller mer. Hvis den finner en lagret vits for dagen så viser den vitsen frem. Hvis ikke henter den en vits fra APIet og lagrer den i JSON filen. Om klokken ikke har nådd 9 henter den vitsen fra forrige dag ved samme metode.
 
-Problemer:
+## Problemer:
 - Proxmox orker ikke koble seg til. Måtte endre IP utellelig ganger
 - Docker og nginx er svært forvirrende og jeg hadde ikke fått det til uten Kevin
 - Koden var client sided til å begynne med, måtte endre til server side ved å skrive på nytt i python
