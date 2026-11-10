@@ -56,3 +56,13 @@ Min arbeidsoppgave har vært å programmere selve funksjonen av appen. Altså at
 - Proxmox orker ikke koble seg til. Måtte endre IP utellelig ganger
 - Docker og nginx er svært forvirrende og jeg hadde ikke fått det til uten Kevin
 - Koden var client sided til å begynne med, måtte endre til server side ved å skrive på nytt i python
+
+## Teknisk
+
+## Docker
+
+
+## Tilgansplan
+
+## Forklaring
+Formålet ved appen er å skape glede i en potensielt dårlig dag ved hjelp av Chuck Norris vitser. Klokken ni om morgenen hver dag henter vi en ny Chuck Norris vits for å vise frem på nettsiden vårs. Vitsene blir lagret ned med dato slik at alle vitser som har blitt vist kan ses.
