@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .qr-code {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        width: 120px;
+        padding: 8px;
+        background: white;
+        border-radius: 12px;
+        z-index: 9999;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .qr-code img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
+    @media screen and (max-width: 767px) {
+        .qr-code {
+            display: none;
+        }
+    }
         .gradient {
             background: linear-gradient(to bottom, rgb(3, 3, 3)0%,rgb(50,50,50)80%,rgb(116, 115, 115));
             position: fixed;
@@ -39,6 +63,9 @@
         }
     </style>
 </head>
+ <div class="qr-code">
+    <img src="{{ url_for('static', filename='unnamed.jpg') }}" alt="QR Code">
+</div>
 <body>
     <div class="gradient">
         <div class="center">
