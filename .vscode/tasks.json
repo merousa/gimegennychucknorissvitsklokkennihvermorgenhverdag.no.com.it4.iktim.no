@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Launch Flask app",
+			"type": "shell",
+			"command": "uv",
+			"args": [
+				"run",
+				"python",
+				"src\\gimegennychucknorissvitsklokkennihvermorgenhverdag_no_com_it4_iktim_no\\app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
