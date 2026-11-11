@@ -46,7 +46,7 @@ Jeg ryddet også opp i oppsettet slik at appen bruker pakkestrukturen konsekvent
 
 
 # Noah Dokumentasjon:
-
+Min arbeidsoppgave var og gjøre det visuele delen av prosjekte, det var for det meste gjort av sebastian, han hjalp til med og lage noen containers og boxes for for meg til og endre farge på, vi endte opp med engrålig svart gradient farge på nettsiden, etter vi hadde gjort det skulle vi lage til så det fungerer på mobilen som jeg aldri gjorde, men tror trym fiksa det etter hvert
 
 
 # Sebastian Dokumentasjon:
