@@ -63,6 +63,6 @@ Min arbeidsoppgave har vært å programmere selve funksjonen av appen. Altså at
 
 
 ## Tilgansplan
-
+Alle har tilgang til alt på nettsiden.
 ## Forklaring
 Formålet ved appen er å skape glede i en potensielt dårlig dag ved hjelp av Chuck Norris vitser. Klokken ni om morgenen hver dag henter vi en ny Chuck Norris vits for å vise frem på nettsiden vårs. Vitsene blir lagret ned med dato slik at alle vitser som har blitt vist kan ses.
