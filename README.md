@@ -46,7 +46,7 @@ Jeg ryddet også opp i oppsettet slik at appen bruker pakkestrukturen konsekvent
 
 
 # Noah Dokumentasjon:
-
+Min arbeidsoppgave var og gjøre det visuele delen av prosjekte, det var for det meste gjort av sebastian, han hjalp til med og lage noen containers og boxes for for meg til og endre farge på, vi endte opp med engrålig svart gradient farge på nettsiden, etter vi hadde gjort det skulle vi lage til så det fungerer på mobilen som jeg aldri gjorde, men tror trym fiksa det etter hvert
 
 
 # Sebastian Dokumentasjon:
@@ -60,7 +60,7 @@ Min arbeidsoppgave har vært å programmere selve funksjonen av appen. Altså at
 ## Teknisk
 
 ## Docker
-
+Dockerfilen henter en python modell fra Docker Hub og angir hvilket directory den skal se på. Så laster den ned UV og henter kravene. Etterpå oppdaterer den seg selv og prøve å innstalere kravene og blir kvitt restene av de gamle utdaterte filene. Deretter prøver den å synce med uv, også henter den src folderen, kopierer jokeVault JSON filen og åpner port 5000 før den starter appen.
 
 ## Tilgansplan
 Alle har tilgang til alt på nettsiden.
