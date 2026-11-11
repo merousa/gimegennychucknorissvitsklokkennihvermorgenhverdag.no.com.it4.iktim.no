@@ -60,9 +60,10 @@ Min arbeidsoppgave har vært å programmere selve funksjonen av appen. Altså at
 ## Teknisk
 
 ## Docker
-
+Dockerfilen henter en python modell fra Docker Hub og angir hvilket directory den skal se på. Så laster den ned UV og henter kravene. Etterpå oppdaterer den seg selv og prøve å innstalere kravene og blir kvitt restene av de gamle utdaterte filene. Deretter prøver den å synce med uv, også henter den src folderen, kopierer jokeVault JSON filen og åpner port 5000 før den starter appen.
 
 ## Tilgansplan
+
 
 ## Forklaring
 Formålet ved appen er å skape glede i en potensielt dårlig dag ved hjelp av Chuck Norris vitser. Klokken ni om morgenen hver dag henter vi en ny Chuck Norris vits for å vise frem på nettsiden vårs. Vitsene blir lagret ned med dato slik at alle vitser som har blitt vist kan ses.
