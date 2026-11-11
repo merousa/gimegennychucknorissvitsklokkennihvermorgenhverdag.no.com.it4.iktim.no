@@ -59,6 +59,7 @@ Min arbeidsoppgave har vært å programmere selve funksjonen av appen. Altså at
 
 ## Teknisk
 Applikasjonen bruker Python, Flask, Docker og Nginx. Docker starte, stoppe og oppdatere applikasjonen, mens Nginx videresender trafikken.
+Applikasjonen blir oppdatert via Nginx i proxmox der me bruke comandoen git pull
 
 ## Docker
 Dockerfilen henter en python modell fra Docker Hub og angir hvilket directory den skal se på. Så laster den ned UV og henter kravene. Etterpå oppdaterer den seg selv og prøve å innstalere kravene og blir kvitt restene av de gamle utdaterte filene. Deretter prøver den å synce med uv, også henter den src folderen, kopierer jokeVault JSON filen og åpner port 5000 før den starter appen.
