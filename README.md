@@ -53,17 +53,18 @@ Min arbeidsoppgave var og gjøre det visuele delen av prosjekte, det var for det
 Min arbeidsoppgave har vært å programmere selve funksjonen av appen. Altså at du får en tilfeldig chuck norris vits klokken 9 hver morgen. Jeg begynte først med å sette opp flask og lage en super simpel template html fil å jobbe i. Jeg satt først opp JavaScript i HTML som sjekket hva klokken var, og om det hadde passert klokken 9 enda, hentet en vits fra APIet til api.chucknorris.io også viste den på tekst objektet. Jeg hadde det satt opp slik at den sjekke om det allerede fins en vits i localStorage, og hvis der gjør, vis den frem. Hvis ikke, hent en vits fra APIet og lagre den i localStorage. Sondre viste meg at det vil si at vitsen er bare lokal. Hver maskin hadde fått en annerledes vits, men målet var at alle fikk den samme nye vitsen. Derfor begynte jeg å kode logikken igjen i flask. Da fikk jeg satt opp en nokså lik funksjon. Der er en JSON jokeVault fil som lagrer alle vitsene og datoene de var på. Først sjekker koden om det er en vits lagret for dagens dato, og om klokken er 9 eller mer. Hvis den finner en lagret vits for dagen så viser den vitsen frem. Hvis ikke henter den en vits fra APIet og lagrer den i JSON filen. Om klokken ikke har nådd 9 henter den vitsen fra forrige dag ved samme metode.
 
 ## Problemer:
-- Proxmox orker ikke koble seg til. Måtte endre IP utellelig ganger
+- Proxmox orker ikke koble seg til. Måtte endre IP utallige ganger
 - Docker og nginx er svært forvirrende og jeg hadde ikke fått det til uten Kevin
 - Koden var client sided til å begynne med, måtte endre til server side ved å skrive på nytt i python
 
 ## Teknisk
+Appen er containerisert hved hjelp av docker. Containeren blir startet og hostet gjennom flask og nginx.
 
 ## Docker
 Dockerfilen henter en python modell fra Docker Hub og angir hvilket directory den skal se på. Så laster den ned UV og henter kravene. Etterpå oppdaterer den seg selv og prøve å innstalere kravene og blir kvitt restene av de gamle utdaterte filene. Deretter prøver den å synce med uv, også henter den src folderen, kopierer jokeVault JSON filen og åpner port 5000 før den starter appen.
 
 ## Tilgansplan
-
+Port 5000 må være åpen siden det er den porten flask bruker.
 
 ## Forklaring
 Formålet ved appen er å skape glede i en potensielt dårlig dag ved hjelp av Chuck Norris vitser. Klokken ni om morgenen hver dag henter vi en ny Chuck Norris vits for å vise frem på nettsiden vårs. Vitsene blir lagret ned med dato slik at alle vitser som har blitt vist kan ses.
